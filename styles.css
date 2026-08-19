@@ -1639,3 +1639,127 @@ main.container{
     color:#000;
   }
 }
+/* ============================================================
+   PAGE SPEED / ACCESSIBILITY - HIGH CONTRAST FIX
+   WCAG AA SAFE COLORS
+   ============================================================ */
+
+/* Main text */
+body{
+  color:#20252a;
+}
+
+.hero-lead p,
+.card p,
+.job-row .org,
+.page-body p,
+.page-body li,
+.article-body{
+  color:#343a40;
+}
+
+/* Secondary text */
+.utility-bar,
+.hero-side .meta,
+.notif-line,
+.page-body .updated,
+.breadcrumb{
+  color:#4b5560;
+}
+
+/* Links */
+a{
+  color:#155b91;
+}
+
+a:hover{
+  color:#0b426b;
+}
+
+/* Latest ticker */
+.ticker-label{
+  background:#8a4f13;
+  color:#fff;
+}
+
+.ticker-track li{
+  color:#343a40;
+}
+
+.ticker-track a{
+  color:#20252a;
+}
+
+/* Section/category labels */
+.hero-lead .eyebrow,
+.card .cat{
+  color:#8a4f13;
+}
+
+/* Agriculture */
+.card[data-cat="agriculture"]{
+  border-top-color:#8a4f13;
+}
+
+.card[data-cat="agriculture"] .cat{
+  color:#8a4f13;
+}
+
+/* Scholarship */
+.card[data-cat="scholarship"]{
+  border-top-color:#8a4f13;
+}
+
+.card[data-cat="scholarship"] .cat{
+  color:#8a4f13;
+}
+
+/* Status colours */
+.status-open{
+  background:#e1f2e8;
+  color:#17633d;
+  border-color:#17633d;
+}
+
+.status-upcoming{
+  background:#e4edf5;
+  color:#155b91;
+  border-color:#155b91;
+}
+
+.status-closed{
+  background:#f7e3e0;
+  color:#8f2118;
+  border-color:#8f2118;
+}
+
+/* Job deadlines */
+.job-row .deadline{
+  color:#343a40;
+}
+
+.job-row .deadline strong{
+  color:#8a4f13;
+}
+
+/* Footer links */
+.footer-links a{
+  color:#b9c8d4;
+}
+
+.footer-links a:hover{
+  color:#fff;
+}
+
+.footer-bottom-links a{
+  color:#aebfcb;
+}
+
+/* Footer secondary text */
+.footer-disclaimer p{
+  color:#b5c4cf;
+}
+
+.footer-copyright{
+  color:#9cafbc;
+}
