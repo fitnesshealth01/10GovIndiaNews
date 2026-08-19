@@ -1,1058 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-  <title>GovIndiaNews — Government Schemes, Sarkari Jobs & Exam Updates</title>
+  <title>
+    GovIndiaNews — Government Schemes, Sarkari Jobs &amp; Exam Updates
+  </title>
 
-  <meta name="description"
-        content="Independent coverage of Indian government schemes, sarkari jobs and exam notifications, explained in plain language with deadlines and eligibility.">
+  <meta
+    name="description"
+    content="Independent coverage of Indian government schemes, sarkari jobs and exam notifications, explained in plain language with deadlines and eligibility."
+  >
 
-  <link rel="canonical" href="https://www.govindianews.com/">
+  <link
+    rel="canonical"
+    href="https://www.govindianews.com/"
+  >
 
-  <meta name="theme-color" content="#0a2a47">
-  <meta name="color-scheme" content="light">
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="favicon.svg"
+  >
+
+  <meta
+    name="theme-color"
+    content="#0a2a47"
+  >
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="GovIndiaNews">
-  <meta property="og:title" content="GovIndiaNews — Government Schemes, Sarkari Jobs & Exam Updates">
-  <meta property="og:description"
-        content="Independent coverage of Indian government schemes, sarkari jobs and exam notifications, explained in plain language with deadlines and eligibility.">
-  <meta property="og:url" content="https://www.govindianews.com/">
-  <meta property="og:image" content="https://www.govindianews.com/assets/og-image.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:site_name"
+    content="GovIndiaNews"
+  >
+
+  <meta
+    property="og:title"
+    content="GovIndiaNews — Government Schemes, Sarkari Jobs & Exam Updates"
+  >
+
+  <meta
+    property="og:description"
+    content="Independent coverage of Indian government schemes, sarkari jobs and exam notifications, explained in plain language with deadlines and eligibility."
+  >
+
+  <meta
+    property="og:url"
+    content="https://www.govindianews.com/"
+  >
+
+  <meta
+    property="og:image"
+    content="https://www.govindianews.com/assets/og-image.jpg"
+  >
+
+  <meta
+    property="og:image:width"
+    content="1200"
+  >
+
+  <meta
+    property="og:image:height"
+    content="630"
+  >
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="GovIndiaNews — Government Schemes, Sarkari Jobs & Exam Updates">
-  <meta name="twitter:description"
-        content="Independent coverage of Indian government schemes, sarkari jobs and exam notifications.">
-  <meta name="twitter:image" content="https://www.govindianews.com/assets/og-image.jpg">
 
-  <!-- Small favicon is cheap to load -->
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
 
-  <!--
-    Critical CSS is inline.
-    This prevents the main stylesheet from blocking first paint.
-  -->
-  <style>
-    /* =========================================================
-       RESET
-       ========================================================= */
+  <meta
+    name="twitter:title"
+    content="GovIndiaNews — Government Schemes, Sarkari Jobs & Exam Updates"
+  >
 
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
+  <meta
+    name="twitter:description"
+    content="Independent coverage of Indian government schemes, sarkari jobs and exam notifications, explained in plain language with deadlines and eligibility."
+  >
 
-    html {
-      scroll-behavior: smooth;
-      -webkit-text-size-adjust: 100%;
-    }
+  <meta
+    name="twitter:image"
+    content="https://www.govindianews.com/assets/og-image.jpg"
+  >
 
-    body {
-      margin: 0;
-      background: #f7f5f0;
-      color: #17202a;
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-      font-size: 16px;
-      line-height: 1.55;
-      text-rendering: optimizeSpeed;
-    }
+  <!-- Main stylesheet -->
 
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
+  <link
+    rel="stylesheet"
+    href="styles.min.css"
+  >
 
-    a {
-      color: inherit;
-    }
+  <!-- Structured Data -->
 
-    button,
-    input,
-    textarea,
-    select {
-      font: inherit;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    p {
-      margin-top: 0;
-    }
-
-    /* =========================================================
-       LAYOUT
-       ========================================================= */
-
-    .container {
-      width: min(1180px, calc(100% - 32px));
-      margin-inline: auto;
-    }
-
-    /* =========================================================
-       TOP BAR
-       ========================================================= */
-
-    .utility-bar {
-      min-height: 34px;
-      display: flex;
-      align-items: center;
-      background: #071d31;
-      color: #dce8f1;
-      font-size: 12px;
-    }
-
-    .utility-bar .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    /* =========================================================
-       MASTHEAD
-       ========================================================= */
-
-    .masthead {
-      background: #0a2a47;
-      color: #fff;
-      border-bottom: 1px solid rgba(255,255,255,.12);
-    }
-
-    .masthead .container {
-      min-height: 112px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .masthead h1 {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(34px, 5vw, 54px);
-      line-height: 1;
-      letter-spacing: -1.5px;
-    }
-
-    .masthead h1 a {
-      text-decoration: none;
-    }
-
-    .tagline {
-      margin-top: 10px;
-      color: #d5e2ed;
-      font-size: 14px;
-    }
-
-    /* =========================================================
-       NAVIGATION
-       ========================================================= */
-
-    .primary-nav {
-      background: #fff;
-      border-bottom: 1px solid #d9dde1;
-    }
-
-    .primary-nav .container {
-      min-height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .primary-nav ul {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      gap: 0;
-      padding: 0;
-      margin: 0;
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-
-    .primary-nav ul::-webkit-scrollbar {
-      display: none;
-    }
-
-    .primary-nav li {
-      flex: 0 0 auto;
-    }
-
-    .primary-nav a {
-      display: block;
-      padding: 15px 14px;
-      color: #263746;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    .primary-nav a:hover,
-    .primary-nav a.active {
-      color: #b42318;
-    }
-
-    .nav-toggle {
-      display: none;
-      border: 0;
-      background: transparent;
-      color: #0a2a47;
-      padding: 8px;
-      cursor: pointer;
-    }
-
-    /* =========================================================
-       DISCLAIMER
-       ========================================================= */
-
-    .disclaimer-bar {
-      background: #fff7df;
-      color: #654c11;
-      border-bottom: 1px solid #ead9a7;
-      padding: 9px 16px;
-      font-size: 12px;
-      line-height: 1.45;
-      text-align: center;
-    }
-
-    /* =========================================================
-       NEWS TICKER
-       ========================================================= */
-
-    .ticker-wrap {
-      min-height: 42px;
-      display: flex;
-      align-items: stretch;
-      background: #111;
-      color: #fff;
-      overflow: hidden;
-    }
-
-    .ticker-label {
-      flex: 0 0 auto;
-      display: flex;
-      align-items: center;
-      padding: 0 18px;
-      background: #b42318;
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-    }
-
-    .ticker-track {
-      min-width: 0;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-    }
-
-    .ticker-track ul {
-      display: flex;
-      align-items: center;
-      gap: 48px;
-      list-style: none;
-      margin: 0;
-      padding: 0 24px;
-      white-space: nowrap;
-    }
-
-    .ticker-track a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 13px;
-    }
-
-    /* =========================================================
-       MAIN
-       ========================================================= */
-
-    main.container {
-      padding-top: 28px;
-      padding-bottom: 50px;
-    }
-
-    section {
-      margin-bottom: 46px;
-    }
-
-    /* =========================================================
-       HERO
-       ========================================================= */
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.65fr) minmax(300px, 1fr);
-      gap: 24px;
-      min-height: 430px;
-    }
-
-    .hero-lead {
-      position: relative;
-      min-height: 430px;
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      overflow: hidden;
-      background:
-        linear-gradient(
-          180deg,
-          #123f61 0%,
-          #0a2a47 100%
-        );
-      color: #fff;
-      border-radius: 3px;
-    }
-
-    /*
-      Instead of a remote hero image, this uses a CSS placeholder.
-      That eliminates an image request and prevents LCP from waiting
-      for an image.
-    */
-    .thumb {
-      position: absolute;
-      inset: 0 0 auto 0;
-      height: 58%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(255,255,255,.28);
-      background:
-        linear-gradient(
-          135deg,
-          #164e76,
-          #0b3455
-        );
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 14px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    .hero-lead::after {
-      content: "";
-      position: absolute;
-      inset: 30% 0 0;
-      background: linear-gradient(
-        to bottom,
-        transparent,
-        rgba(0,0,0,.72)
-      );
-      pointer-events: none;
-    }
-
-    .hero-lead > *:not(.thumb) {
-      position: relative;
-      z-index: 1;
-    }
-
-    .eyebrow,
-    .cat {
-      color: #b42318;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    .hero-lead .eyebrow {
-      color: #f3c36b;
-      margin-bottom: 8px;
-    }
-
-    .hero-lead h2 {
-      max-width: 780px;
-      margin-bottom: 12px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(28px, 4vw, 44px);
-      line-height: 1.1;
-      letter-spacing: -.5px;
-    }
-
-    .hero-lead h2 a {
-      text-decoration: none;
-    }
-
-    .hero-lead p {
-      max-width: 760px;
-      margin-bottom: 16px;
-      color: #e7eef4;
-      font-size: 15px;
-    }
-
-    .hero-side {
-      min-width: 0;
-      border-top: 4px solid #0a2a47;
-      background: #fff;
-    }
-
-    .hero-side article {
-      min-height: 107px;
-      padding: 17px 18px;
-      border-bottom: 1px solid #dfe3e6;
-    }
-
-    .hero-side article:last-child {
-      border-bottom: 0;
-    }
-
-    .meta {
-      margin-bottom: 5px;
-      color: #687783;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: .04em;
-    }
-
-    .hero-side h3 {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 19px;
-      line-height: 1.25;
-    }
-
-    .hero-side h3 a,
-    .card h3 a,
-    .job-row h3 a {
-      text-decoration: none;
-    }
-
-    .hero-side h3 a:hover,
-    .card h3 a:hover,
-    .job-row h3 a:hover {
-      color: #b42318;
-    }
-
-    /* =========================================================
-       SECTION HEADINGS
-       ========================================================= */
-
-    .section-head {
-      min-height: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      margin-bottom: 16px;
-      border-bottom: 2px solid #0a2a47;
-    }
-
-    .section-head h2 {
-      margin: 0;
-      color: #0a2a47;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 26px;
-      line-height: 1.2;
-    }
-
-    .see-all {
-      color: #b42318;
-      font-size: 13px;
-      font-weight: 700;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    /* =========================================================
-       CARDS
-       ========================================================= */
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      min-width: 0;
-      min-height: 240px;
-      display: flex;
-      flex-direction: column;
-      padding: 21px;
-      background: #fff;
-      border: 1px solid #dde1e4;
-      border-top: 3px solid #0a2a47;
-      border-radius: 2px;
-    }
-
-    .card .cat {
-      margin-bottom: 8px;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      color: #182631;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 21px;
-      line-height: 1.25;
-    }
-
-    .card p {
-      margin-bottom: 18px;
-      color: #586873;
-      font-size: 14px;
-    }
-
-    .notif-line {
-      margin-top: auto;
-      padding-top: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      border-top: 1px solid #e6e8ea;
-      color: #71808a;
-      font-family:
-        "Courier New",
-        monospace;
-      font-size: 10px;
-    }
-
-    /* =========================================================
-       STATUS
-       ========================================================= */
-
-    .status-pill {
-      display: inline-flex;
-      align-items: center;
-      min-height: 24px;
-      padding: 3px 8px;
-      border-radius: 999px;
-      font-size: 10px;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    .status-open {
-      background: #e6f5eb;
-      color: #176b36;
-    }
-
-    .status-upcoming {
-      background: #fff2d9;
-      color: #875900;
-    }
-
-    .status-closed {
-      background: #eee;
-      color: #666;
-    }
-
-    /* =========================================================
-       JOBS
-       ========================================================= */
-
-    .job-list {
-      background: #fff;
-      border: 1px solid #dde1e4;
-    }
-
-    .job-row {
-      min-height: 98px;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      align-items: center;
-      gap: 20px;
-      padding: 18px 20px;
-      border-bottom: 1px solid #e2e5e7;
-    }
-
-    .job-row:last-child {
-      border-bottom: 0;
-    }
-
-    .job-row h3 {
-      margin: 0 0 5px;
-      color: #182631;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 19px;
-      line-height: 1.25;
-    }
-
-    .org {
-      color: #6c7a84;
-      font-size: 12px;
-    }
-
-    .deadline {
-      min-width: 155px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 7px;
-      color: #465560;
-      font-size: 12px;
-    }
-
-    /* =========================================================
-   FOOTER - FIXED RESPONSIVE VERSION
-   ========================================================= */
-
-.footer {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background: #071d2e;
-  color: #c8d4dd;
-}
-
-/* Disclaimer */
-
-.footer-disclaimer {
-  width: 100%;
-  margin: 0;
-  padding: 24px 0;
-  background: #061827;
-  border-bottom: 1px solid rgba(255,255,255,.06);
-}
-
-.footer-disclaimer .container {
-  width: min(1180px, calc(100% - 32px));
-  margin: 0 auto;
-}
-
-.footer-disclaimer p {
-  max-width: 100%;
-  margin: 0;
-  color: #9fb0bc;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  line-height: 1.65;
-}
-
-/* Main footer */
-
-.footer-main {
-  width: 100%;
-  margin: 0;
-  padding: 42px 0;
-  background: #071d2e;
-}
-
-.footer-main > .container {
-  width: min(1180px, calc(100% - 32px));
-  margin: 0 auto;
-}
-
-/* Three columns */
-
-.footer-grid {
-  width: 100%;
-  display: grid;
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
-  gap: 60px;
-  margin: 0;
-  padding: 0;
-}
-
-/* Individual columns */
-
-.footer-col {
-  min-width: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.footer-col h4 {
-  margin: 0 0 17px;
-  padding: 0;
-  color: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1.3;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-}
-
-.footer-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.footer-links li {
-  margin: 0 0 10px;
-  padding: 0;
-}
-
-.footer-links a {
-  display: inline-block;
-  color: #aebdc8;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 1.45;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-/* Bottom copyright area */
-
-.footer-bottom {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background: #071d2e;
-  border-top: 1px solid rgba(255,255,255,.09);
-}
-
-.footer-bottom > .container {
-  width: min(1180px, calc(100% - 32px));
-  margin: 0 auto;
-}
-
-.footer-bottom-inner {
-  min-height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-  padding: 18px 0;
-}
-
-.footer-copyright {
-  margin: 0;
-  color: #8295a2;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  line-height: 1.5;
-}
-
-.footer-bottom-links {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 9px;
-  margin: 0;
-  padding: 0;
-}
-
-.footer-bottom-links a {
-  color: #9eafbb;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  line-height: 1.5;
-  text-decoration: none;
-}
-
-.footer-bottom-links a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-.footer-bottom-links span {
-  color: #526a79;
-  font-size: 10px;
-}
-
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media (max-width: 800px) {
-
-  .footer-disclaimer {
-    padding: 24px 0;
-  }
-
-  .footer-disclaimer .container,
-  .footer-main > .container,
-  .footer-bottom > .container {
-    width: calc(100% - 32px);
-  }
-
-  .footer-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-  }
-
-  .footer-main {
-    padding: 36px 0;
-  }
-
-  .footer-bottom-inner {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .footer-bottom-links {
-    justify-content: flex-start;
-  }
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 560px) {
-
-  .footer-disclaimer {
-    padding: 22px 0;
-  }
-
-  .footer-disclaimer .container,
-  .footer-main > .container,
-  .footer-bottom > .container {
-    width: calc(100% - 28px);
-  }
-
-  .footer-disclaimer p {
-    font-size: 12px;
-    line-height: 1.6;
-  }
-
-  .footer-main {
-    padding: 34px 0 38px;
-  }
-
-  /*
-    Keep the three footer categories side-by-side
-    instead of creating a very tall broken column.
-  */
-  .footer-grid {
-    grid-template-columns:
-      repeat(3, minmax(0, 1fr));
-    gap: 14px;
-    align-items: start;
-  }
-
-  .footer-col h4 {
-    margin-bottom: 14px;
-    font-size: 11px;
-    line-height: 1.35;
-  }
-
-  .footer-links li {
-    margin-bottom: 9px;
-  }
-
-  .footer-links a {
-    font-size: 11px;
-    line-height: 1.45;
-    overflow-wrap: anywhere;
-  }
-
-  .footer-bottom {
-    padding: 0;
-  }
-
-  .footer-bottom-inner {
-    min-height: 0;
-    padding: 24px 0 28px;
-    gap: 18px;
-  }
-
-  .footer-copyright {
-    width: 100%;
-    font-size: 10px;
-    line-height: 1.6;
-  }
-
-  .footer-bottom-links {
-    width: 100%;
-    justify-content: flex-start;
-    gap: 7px;
-  }
-
-  .footer-bottom-links a {
-    font-size: 10px;
-  }
-
-  .footer-bottom-links span {
-    font-size: 9px;
-  }
-}
-
-
-/* =========================================================
-   VERY SMALL PHONES
-   ========================================================= */
-
-@media (max-width: 360px) {
-
-  .footer-grid {
-    gap: 10px;
-  }
-
-  .footer-col h4 {
-    font-size: 10px;
-  }
-
-  .footer-links a {
-    font-size: 10px;
-  }
-}
-
-    /* =========================================================
-       FOCUS
-       ========================================================= */
-
-    :focus-visible {
-      outline: 3px solid #e8a52b;
-      outline-offset: 3px;
-    }
-
-    /* =========================================================
-       MOBILE
-       ========================================================= */
-
-    @media (max-width: 800px) {
-
-      .container {
-        width: min(100% - 24px, 1180px);
-      }
-
-      .masthead .container {
-        min-height: 92px;
-      }
-
-      .masthead h1 {
-        font-size: 38px;
-      }
-
-      .tagline {
-        font-size: 12px;
-      }
-
-      .primary-nav .container {
-        min-height: 48px;
-      }
-
-      .primary-nav ul {
-        width: 100%;
-      }
-
-      .primary-nav a {
-        padding: 14px 10px;
-        font-size: 12px;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        min-height: 0;
-      }
-
-      .hero-lead {
-        min-height: 450px;
-      }
-
-      .hero-side {
-        min-height: 0;
-      }
-
-      .card-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .card {
-        min-height: 0;
-      }
-
-      .job-row {
-        grid-template-columns: 1fr;
-      }
-
-      .deadline {
-        min-width: 0;
-        align-items: flex-start;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-
-    @media (max-width: 480px) {
-
-      .utility-bar .container {
-        font-size: 10px;
-      }
-
-      .utility-bar .container span:last-child {
-        display: none;
-      }
-
-      .masthead h1 {
-        font-size: 32px;
-      }
-
-      .hero-lead {
-        min-height: 410px;
-        padding: 21px;
-      }
-
-      .hero-lead h2 {
-        font-size: 29px;
-      }
-
-      .hero-lead p {
-        font-size: 14px;
-      }
-
-      .ticker-label {
-        padding-inline: 12px;
-      }
-
-      .section-head h2 {
-        font-size: 22px;
-      }
-
-      .job-row {
-        padding: 17px;
-      }
-
-      .notif-line {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-    }
-
-    /*
-      Respect users who prefer reduced motion.
-      The ticker is intentionally static by default for performance.
-    */
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-    }
-  </style>
-
-  <!--
-    Structured data does not block rendering.
-  -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -1065,129 +120,219 @@
   }
   </script>
 
-  <!--
-    Load the existing stylesheet after the first render.
-    Critical styles above already make the page usable.
-  -->
-  <link
-    rel="preload"
-    href="styles.min.css"
-    as="style"
-    onload="this.onload=null;this.rel='stylesheet'">
-
-  <noscript>
-    <link rel="stylesheet" href="styles.min.css">
-  </noscript>
 </head>
+
 
 <body>
 
+
+  <!-- ======================================================
+       UTILITY BAR
+       ====================================================== -->
+
   <div class="utility-bar">
+
     <div class="container">
-      <span data-current-date>Wednesday, August 19, 2026</span>
-      <span>Edition: National · English</span>
+
+      <span data-current-date>
+        Wednesday, August 19, 2026
+      </span>
+
+      <span>
+        Edition: National &middot; English
+      </span>
+
     </div>
+
   </div>
 
+
+  <!-- ======================================================
+       MASTHEAD
+       ====================================================== -->
+
   <header class="masthead">
+
     <div class="container">
+
       <h1>
-        <a href="index.html">GovIndiaNews</a>
+        <a href="index.html">
+          GovIndiaNews
+        </a>
       </h1>
+
       <div class="tagline">
-        Schemes · Sarkari Jobs · Exam Updates — Explained Simply
+        Schemes &middot; Sarkari Jobs &middot; Exam Updates — Explained Simply
       </div>
+
     </div>
+
   </header>
 
-  <nav class="primary-nav" aria-label="Primary navigation">
+
+  <!-- ======================================================
+       PRIMARY NAVIGATION
+       ====================================================== -->
+
+  <nav
+    class="primary-nav"
+    aria-label="Primary navigation"
+  >
+
     <div class="container">
 
       <ul>
+
         <li>
-          <a href="index.html" class="active" aria-current="page">Home</a>
+          <a
+            href="index.html"
+            class="active"
+            aria-current="page"
+          >
+            Home
+          </a>
         </li>
+
         <li>
-          <a href="schemes.html">Government Schemes</a>
+          <a href="schemes.html">
+            Government Schemes
+          </a>
         </li>
+
         <li>
-          <a href="jobs.html">Sarkari Jobs</a>
+          <a href="jobs.html">
+            Sarkari Jobs
+          </a>
         </li>
+
         <li>
-          <a href="education.html">Education & Exams</a>
+          <a href="education.html">
+            Education &amp; Exams
+          </a>
         </li>
+
         <li>
-          <a href="about.html">About</a>
+          <a href="about.html">
+            About
+          </a>
         </li>
+
         <li>
-          <a href="contact.html">Contact</a>
+          <a href="contact.html">
+            Contact
+          </a>
         </li>
+
       </ul>
+
 
       <button
         class="nav-toggle"
         type="button"
         aria-label="Toggle menu"
-        aria-expanded="false">
-        ☰
+        aria-expanded="false"
+      >
+        &#9776;
       </button>
 
     </div>
+
   </nav>
 
+
+  <!-- ======================================================
+       DISCLAIMER
+       ====================================================== -->
+
   <div class="disclaimer-bar">
-    <strong>GovIndiaNews</strong>
-    is an independent news & information portal. We are not affiliated with,
-    endorsed by, or operated by the Government of India or any state government.
+
+    <strong>
+      GovIndiaNews
+    </strong>
+
+    is an independent news &amp; information portal.
+    We are not affiliated with, endorsed by, or operated by
+    the Government of India or any state government.
+
   </div>
 
-  <div class="ticker-wrap" aria-label="Latest news">
 
-    <div class="ticker-label">Latest</div>
+  <!-- ======================================================
+       LATEST NEWS TICKER
+       ====================================================== -->
+
+  <div
+    class="ticker-wrap"
+    aria-label="Latest news"
+  >
+
+    <div class="ticker-label">
+      Latest
+    </div>
 
     <div class="ticker-track">
+
       <ul>
+
         <li>
           <a href="article.html">
             PM Awas Yojana second phase applications open in 12 states
           </a>
         </li>
+
         <li>
           <a href="jobs.html">
             SSC releases combined graduate level notification for 2026
           </a>
         </li>
+
         <li>
           <a href="article.html">
             Ayushman Bharat coverage extended to gig workers
           </a>
         </li>
+
         <li>
           <a href="education.html">
             CBSE announces revised board exam datesheet
           </a>
         </li>
+
         <li>
           <a href="article.html">
             Skill India Digital adds 40 new certification tracks
           </a>
         </li>
+
       </ul>
+
     </div>
 
   </div>
 
+
+  <!-- ======================================================
+       MAIN CONTENT
+       ====================================================== -->
+
   <main class="container">
 
-    <!-- =====================================================
-         HERO
-         ===================================================== -->
 
-    <section class="hero" aria-label="Featured news">
+    <!-- ====================================================
+         HERO
+         ==================================================== -->
+
+    <section
+      class="hero"
+      aria-label="Featured news"
+    >
 
       <div class="hero-lead">
 
-        <div class="thumb" aria-hidden="true">
+        <div
+          class="thumb"
+          aria-hidden="true"
+        >
           Featured Story
         </div>
 
@@ -1196,16 +341,20 @@
         </div>
 
         <h2>
-          <a href="article.html">
+
+          <a
+            href="article.html"
+          >
             PM Awas Yojana 2.0: who qualifies, how to apply,
             and what documents you'll need
           </a>
+
         </h2>
 
         <p>
-          A plain-language walkthrough of the revised eligibility criteria,
-          income slabs, and the state-wise rollout timeline for the housing
-          scheme's latest phase.
+          A plain-language walkthrough of the revised eligibility
+          criteria, income slabs, and the state-wise rollout timeline
+          for the housing scheme's latest phase.
         </p>
 
         <span class="status-pill status-open">
@@ -1214,78 +363,120 @@
 
       </div>
 
+
       <div class="hero-side">
 
+
         <article>
+
           <div class="meta">
-            Sarkari Jobs · Aug 18, 2026
+            Sarkari Jobs &middot; Aug 18, 2026
           </div>
+
           <h3>
             <a href="article.html">
               Railway Recruitment Board opens 9,000+ Group D posts
             </a>
           </h3>
+
         </article>
 
-        <article>
-          <div class="meta">
-            Education & Exams · Aug 17, 2026
-          </div>
-          <h3>
-            <a href="article.html">
-              NEET UG counselling schedule released: key dates inside
-            </a>
-          </h3>
-        </article>
 
         <article>
+
           <div class="meta">
-            Government Schemes · Aug 16, 2026
+            Education &amp; Exams &middot; Aug 17, 2026
           </div>
+
           <h3>
             <a href="article.html">
-              PM Kisan 18th instalment: how to check your payment status
+              NEET UG counselling schedule released:
+              key dates inside
             </a>
           </h3>
+
         </article>
 
+
         <article>
+
           <div class="meta">
-            Sarkari Jobs · Aug 15, 2026
+            Government Schemes &middot; Aug 16, 2026
           </div>
+
           <h3>
             <a href="article.html">
-              State police recruitment 2026: full state-wise list
+              PM Kisan 18th instalment:
+              how to check your payment status
             </a>
           </h3>
+
         </article>
+
+
+        <article>
+
+          <div class="meta">
+            Sarkari Jobs &middot; Aug 15, 2026
+          </div>
+
+          <h3>
+            <a href="article.html">
+              State police recruitment 2026:
+              full state-wise list
+            </a>
+          </h3>
+
+        </article>
+
 
       </div>
 
     </section>
 
-    <!-- =====================================================
+
+    <!-- ====================================================
          GOVERNMENT SCHEMES
-         ===================================================== -->
+         ==================================================== -->
 
     <section aria-labelledby="schemes-head">
 
       <div class="section-head">
-        <h2 id="schemes-head">Government Schemes</h2>
-        <a class="see-all" href="schemes.html">
-          View all →
+
+        <h2 id="schemes-head">
+          Government Schemes
+        </h2>
+
+        <a
+          class="see-all"
+          href="schemes.html"
+        >
+          View all &rarr;
         </a>
+
       </div>
+
 
       <div class="card-grid">
 
-        <article class="card">
-          <div class="cat">Health</div>
+
+        <!-- Health -->
+
+        <article
+          class="card"
+          data-cat="health"
+        >
+
+          <div class="cat">
+            Health
+          </div>
 
           <h3>
+
             <a href="article.html">
               Ayushman Bharat now covers gig and platform workers
             </a>
+
           </h3>
 
           <p>
@@ -1294,18 +485,38 @@
           </p>
 
           <div class="notif-line">
-            <span>Ref: GIN/HLT/0142</span>
-            <span class="status-pill status-open">Ongoing</span>
+
+            <span>
+              Ref: GIN/HLT/0142
+            </span>
+
+            <span class="status-pill status-open">
+              Ongoing
+            </span>
+
           </div>
+
         </article>
 
-        <article class="card">
-          <div class="cat">Agriculture</div>
+
+        <!-- Agriculture -->
+
+        <article
+          class="card"
+          data-cat="agriculture"
+        >
+
+          <div class="cat">
+            Agriculture
+          </div>
 
           <h3>
+
             <a href="article.html">
-              PM Kisan Samman Nidhi: 18th instalment dates confirmed
+              PM Kisan Samman Nidhi:
+              18th instalment dates confirmed
             </a>
+
           </h3>
 
           <p>
@@ -1314,18 +525,38 @@
           </p>
 
           <div class="notif-line">
-            <span>Ref: GIN/AGR/0098</span>
-            <span class="status-pill status-open">Ongoing</span>
+
+            <span>
+              Ref: GIN/AGR/0098
+            </span>
+
+            <span class="status-pill status-open">
+              Ongoing
+            </span>
+
           </div>
+
         </article>
 
-        <article class="card">
-          <div class="cat">Skilling</div>
+
+        <!-- Skilling -->
+
+        <article
+          class="card"
+          data-cat="skilling"
+        >
+
+          <div class="cat">
+            Skilling
+          </div>
 
           <h3>
+
             <a href="article.html">
-              Skill India Digital adds 40 new free certification tracks
+              Skill India Digital adds
+              40 new free certification tracks
             </a>
+
           </h3>
 
           <p>
@@ -1334,182 +565,326 @@
           </p>
 
           <div class="notif-line">
-            <span>Ref: GIN/SKL/0071</span>
+
+            <span>
+              Ref: GIN/SKL/0071
+            </span>
+
             <span class="status-pill status-upcoming">
               Enrolment Opens Soon
             </span>
+
           </div>
+
         </article>
 
+
       </div>
+
     </section>
 
-    <!-- =====================================================
+
+    <!-- ====================================================
          SARKARI JOBS
-         ===================================================== -->
+         ==================================================== -->
 
     <section aria-labelledby="jobs-head">
 
       <div class="section-head">
-        <h2 id="jobs-head">Sarkari Jobs</h2>
-        <a class="see-all" href="jobs.html">
-          View all →
+
+        <h2 id="jobs-head">
+          Sarkari Jobs
+        </h2>
+
+        <a
+          class="see-all"
+          href="jobs.html"
+        >
+          View all &rarr;
         </a>
+
       </div>
+
 
       <div class="job-list">
 
+
+        <!-- Railway -->
+
         <div class="job-row">
 
           <div>
+
             <h3>
+
               <a href="article.html">
-                Railway Recruitment Board — Group D, 9,148 posts
+                Railway Recruitment Board —
+                Group D, 9,148 posts
               </a>
+
             </h3>
+
             <div class="org">
-              Ministry of Railways · All-India
+              Ministry of Railways &middot; All-India
             </div>
+
           </div>
 
+
           <div class="deadline">
-            <span class="status-pill status-open">Open</span>
-            <strong>Closes 10 Sep 2026</strong>
+
+            <span class="status-pill status-open">
+              Open
+            </span>
+
+            <strong>
+              Closes 10 Sep 2026
+            </strong>
+
           </div>
 
         </div>
 
+
+        <!-- SSC -->
+
         <div class="job-row">
 
           <div>
+
             <h3>
+
               <a href="article.html">
-                SSC Combined Graduate Level Examination 2026
+                SSC Combined Graduate Level
+                Examination 2026
               </a>
+
             </h3>
+
             <div class="org">
-              Staff Selection Commission · All-India
+              Staff Selection Commission &middot; All-India
             </div>
+
           </div>
 
+
           <div class="deadline">
-            <span class="status-pill status-open">Open</span>
-            <strong>Closes 05 Sep 2026</strong>
+
+            <span class="status-pill status-open">
+              Open
+            </span>
+
+            <strong>
+              Closes 05 Sep 2026
+            </strong>
+
           </div>
 
         </div>
 
+
+        <!-- UP Police -->
+
         <div class="job-row">
 
           <div>
+
             <h3>
+
               <a href="article.html">
                 Uttar Pradesh Police Constable Recruitment
               </a>
+
             </h3>
+
             <div class="org">
-              UP Police Recruitment Board · Uttar Pradesh
+              UP Police Recruitment Board &middot; Uttar Pradesh
             </div>
+
           </div>
 
+
           <div class="deadline">
+
             <span class="status-pill status-upcoming">
               Opens Soon
             </span>
-            <strong>Starts 01 Sep 2026</strong>
+
+            <strong>
+              Starts 01 Sep 2026
+            </strong>
+
           </div>
 
         </div>
+
+
+        <!-- IBPS -->
 
         <div class="job-row">
 
           <div>
+
             <h3>
+
               <a href="article.html">
-                IBPS Clerk Recruitment — Participating Banks
+                IBPS Clerk Recruitment —
+                Participating Banks
               </a>
+
             </h3>
+
             <div class="org">
-              Institute of Banking Personnel Selection · All-India
+              Institute of Banking Personnel Selection &middot;
+              All-India
             </div>
+
           </div>
 
+
           <div class="deadline">
-            <span class="status-pill status-closed">Closed</span>
-            <strong>Result awaited</strong>
+
+            <span class="status-pill status-closed">
+              Closed
+            </span>
+
+            <strong>
+              Result awaited
+            </strong>
+
           </div>
 
         </div>
 
+
       </div>
+
     </section>
 
-    <!-- =====================================================
-         EDUCATION
-         ===================================================== -->
+
+    <!-- ====================================================
+         EDUCATION & EXAMS
+         ==================================================== -->
 
     <section aria-labelledby="edu-head">
 
       <div class="section-head">
-        <h2 id="edu-head">Education & Exam Updates</h2>
-        <a class="see-all" href="education.html">
-          View all →
+
+        <h2 id="edu-head">
+          Education &amp; Exam Updates
+        </h2>
+
+        <a
+          class="see-all"
+          href="education.html"
+        >
+          View all &rarr;
         </a>
+
       </div>
+
 
       <div class="card-grid">
 
-        <article class="card">
-          <div class="cat">Board Exams</div>
+
+        <!-- Board Exams -->
+
+        <article
+          class="card"
+          data-cat="education"
+        >
+
+          <div class="cat">
+            Board Exams
+          </div>
 
           <h3>
+
             <a href="article.html">
-              CBSE releases revised 2027 board exam datesheet
+              CBSE releases revised
+              2027 board exam datesheet
             </a>
+
           </h3>
 
           <p>
-            Class 10 and 12 exams will now begin a week earlier than
-            last year — full subject-wise schedule inside.
+            Class 10 and 12 exams will now begin a week earlier
+            than last year — full subject-wise schedule inside.
           </p>
 
           <div class="notif-line">
-            <span>Ref: GIN/EDU/0203</span>
+
+            <span>
+              Ref: GIN/EDU/0203
+            </span>
+
             <span class="status-pill status-upcoming">
               Exams Ahead
             </span>
+
           </div>
+
         </article>
 
-        <article class="card">
-          <div class="cat">Entrance Exams</div>
+
+        <!-- Entrance Exams -->
+
+        <article
+          class="card"
+          data-cat="education"
+        >
+
+          <div class="cat">
+            Entrance Exams
+          </div>
 
           <h3>
+
             <a href="article.html">
-              NEET UG counselling schedule and seat matrix released
+              NEET UG counselling schedule
+              and seat matrix released
             </a>
+
           </h3>
 
           <p>
-            Round 1 registration opens next week; here's what
-            documents to keep ready.
+            Round 1 registration opens next week;
+            here's what documents to keep ready.
           </p>
 
           <div class="notif-line">
-            <span>Ref: GIN/EDU/0198</span>
+
+            <span>
+              Ref: GIN/EDU/0198
+            </span>
+
             <span class="status-pill status-open">
               Registration Open
             </span>
+
           </div>
+
         </article>
 
-        <article class="card">
-          <div class="cat">Scholarships</div>
+
+        <!-- Scholarship -->
+
+        <article
+          class="card"
+          data-cat="scholarship"
+        >
+
+          <div class="cat">
+            Scholarships
+          </div>
 
           <h3>
+
             <a href="article.html">
-              National Means-cum-Merit Scholarship applications open
+              National Means-cum-Merit
+              Scholarship applications open
             </a>
+
           </h3>
 
           <p>
@@ -1518,36 +893,68 @@
           </p>
 
           <div class="notif-line">
-            <span>Ref: GIN/EDU/0187</span>
+
+            <span>
+              Ref: GIN/EDU/0187
+            </span>
+
             <span class="status-pill status-open">
               Applications Open
             </span>
+
           </div>
+
         </article>
 
+
       </div>
+
     </section>
+
 
   </main>
 
-  <!-- =======================================================
-       FOOTER
-       ======================================================= -->
 
-  <footer class="footer">
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+
+  <footer
+    class="footer"
+    role="contentinfo"
+  >
+
+
+    <!-- Footer Disclaimer -->
 
     <div class="footer-disclaimer">
+
       <div class="container">
-        Disclaimer: GovIndiaNews is a privately run news and information
-        portal. Content is provided for general informational purposes and
-        is compiled from publicly available government notifications,
-        press releases and official websites. We are not a government
-        entity and cannot process applications, payments, or grievances
-        on behalf of any government body. Always verify scheme and
-        recruitment details on the concerned department's official
-        website before applying or making any payment.
+
+        <p>
+
+          <strong>
+            Disclaimer:
+          </strong>
+
+          GovIndiaNews is a privately run news and information
+          portal. Content is provided for general informational
+          purposes and is compiled from publicly available
+          government notifications, press releases and official
+          websites. We are not a government entity and cannot
+          process applications, payments, or grievances on behalf
+          of any government body. Always verify scheme and
+          recruitment details on the concerned department's
+          official website before applying or making any payment.
+
+        </p>
+
       </div>
+
     </div>
+
+
+    <!-- Footer Main -->
 
     <div class="footer-main">
 
@@ -1555,130 +962,257 @@
 
         <div class="footer-grid">
 
+
+          <!-- Categories -->
+
           <div class="footer-col">
-            <h4 class="footer-col-title">Categories</h4>
+
+            <h4 class="footer-col-title">
+              Categories
+            </h4>
 
             <ul class="footer-links">
+
               <li>
                 <a href="/category-government-schemes.html">
                   Government Schemes
                 </a>
               </li>
+
               <li>
                 <a href="/category-government-jobs.html">
                   Government Jobs
                 </a>
               </li>
+
               <li>
                 <a href="/category-global-finance.html">
                   Global Finance
                 </a>
               </li>
+
             </ul>
+
           </div>
+
+
+          <!-- Trust & Policies -->
 
           <div class="footer-col">
-            <h4 class="footer-col-title">Trust & Policies</h4>
+
+            <h4 class="footer-col-title">
+              Trust &amp; Policies
+            </h4>
 
             <ul class="footer-links">
-              <li><a href="/about.html">About Us</a></li>
-              <li><a href="/author.html">Editorial Team & Author</a></li>
-              <li><a href="/editorial-policy.html">Editorial Policy</a></li>
-              <li><a href="/fact-check-policy.html">Fact Check Policy</a></li>
-              <li><a href="/corrections-policy.html">Corrections Policy</a></li>
-              <li><a href="/ethics-policy.html">Ethics Policy</a></li>
-              <li><a href="/ownership-funding.html">Ownership & Funding</a></li>
+
+              <li>
+                <a href="/about.html">
+                  About Us
+                </a>
+              </li>
+
+              <li>
+                <a href="/author.html">
+                  Editorial Team &amp; Author
+                </a>
+              </li>
+
+              <li>
+                <a href="/editorial-policy.html">
+                  Editorial Policy
+                </a>
+              </li>
+
+              <li>
+                <a href="/fact-check-policy.html">
+                  Fact Check Policy
+                </a>
+              </li>
+
+              <li>
+                <a href="/corrections-policy.html">
+                  Corrections Policy
+                </a>
+              </li>
+
+              <li>
+                <a href="/ethics-policy.html">
+                  Ethics Policy
+                </a>
+              </li>
+
+              <li>
+                <a href="/ownership-funding.html">
+                  Ownership &amp; Funding
+                </a>
+              </li>
+
             </ul>
+
           </div>
+          
+
+              <li>
+                <a href="/corrections-policy.html">
+                  Corrections Policy
+                </a>
+              </li>
+
+
+              <li>
+                <a href="/ethics-policy.html">
+                  Ethics Policy
+                </a>
+              </li>
+
+
+              <li>
+                <a href="/ownership-funding.html">
+                  Ownership &amp; Funding
+                </a>
+              </li>
+
+
+            </ul>
+
+
+          </div>
+
+
+
+
+          <!-- Legal & Contact -->
+
 
           <div class="footer-col">
-            <h4 class="footer-col-title">Legal & Contact</h4>
+
+
+            <h4 class="footer-col-title">
+              Legal &amp; Contact
+            </h4>
+
 
             <ul class="footer-links">
-              <li><a href="/contact.html">Contact Us</a></li>
-              <li><a href="/grievance.html">Grievance Redressal</a></li>
-              <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-              <li><a href="/terms.html">Terms of Service</a></li>
-              <li><a href="/disclaimer.html">Disclaimer</a></li>
-              <li><a href="/cookie-policy.html">Cookie Policy</a></li>
-            </ul>
+
+
+              <li>
+                <a href="/contact.html">
+                  Contact Us
+                </a>
+              </li>
+
+
+              <li>
+                <a href="/grievance.html">
+                  Grievance Redressal
+                </a>
+              </li>
+
+
+              <li>
+                <a href="/privacy-policy.html">
+                  Privacy Policy
+                </a>
+              </li>
+
+
+              <li>
+                <a href="/terms.html">
+                  Terms of Service
+                </a>
+              </li>
+
+
+              <li>
+                <a href="/disclaimer.html">
+                  Disclaimer
+                  </a>
+              </li>
+
+              <li>
+                <a href="/cookie-policy.html">
+                  Cookie Policy
+                </a>
+              </li>
+          </ul>
+
           </div>
+
 
         </div>
 
-      </div>
     </div>
+    </div>
+
+
+    <!-- Footer Bottom -->
 
     <div class="footer-bottom">
 
       <div class="container">
+        <div class="footer-bottom-inner">
 
-        <div class="footer-bottom">
 
           <div class="footer-copyright">
-            © 2026 GovIndiaNews. All rights reserved.
-            Registered Digital News Publisher.
-          </div>
 
-          <div class="footer-bottom-links">
-            <a href="/sitemap.xml">Sitemap XML</a>
-            <span>•</span>
-            <a href="/rss.xml">RSS Feed</a>
-            <span>•</span>
-            <a href="/privacy-policy.html">Privacy</a>
-            <span>•</span>
-            <a href="/terms.html">Terms</a>
+            &copy; 2026 GovIndiaNews.
+            All rights reserved.
+            Registered Digital News Publisher.
+
           </div>
+          <nav
+            class="footer-bottom-links"
+            aria-label="Footer links"
+          >
+
+            <a href="/sitemap.xml">
+              Sitemap XML
+            </a>
+            <span aria-hidden="true">
+              &bull;
+            </span>
+
+            <a href="/rss.xml">
+              RSS Feed
+            </a>
+
+            <span aria-hidden="true">
+              &bull;
+              </span>
+
+            <a href="/privacy-policy.html">
+              Privacy
+            </a>
+
+            <span aria-hidden="true">
+              &bull;
+            </span>
+            <a href="/terms.html">
+              Terms
+            </a>
+
+          </nav>
+
 
         </div>
 
       </div>
+      </div>
 
-    </div>
 
   </footer>
+          <!-- ======================================================
+       JAVASCRIPT
+       Deferred so it does not block initial rendering
+       ====================================================== -->
+          
+          <script
+    src="script.min.js"
+    defer
+  ></script>
 
-  <!--
-    JavaScript is deferred so it cannot delay first paint.
-  -->
-  <script src="script.min.js" defer></script>
-
-  <!--
-    Very small fallback for the date.
-    It does not force layout changes because the date container
-    already has a fixed line-height/min-height.
-  -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const dateElement = document.querySelector("[data-current-date]");
-
-      if (dateElement) {
-        const now = new Date();
-
-        const formatter = new Intl.DateTimeFormat("en-IN", {
-          weekday: "long",
-          month: "long",
-          day: "numeric",
-          year: "numeric"
-        });
-
-        dateElement.textContent = formatter.format(now);
-      }
-
-      const toggle = document.querySelector(".nav-toggle");
-      const nav = document.querySelector(".primary-nav ul");
-
-      if (toggle && nav) {
-        toggle.addEventListener("click", function () {
-          const expanded =
-            toggle.getAttribute("aria-expanded") === "true";
-
-          toggle.setAttribute("aria-expanded", String(!expanded));
-          nav.classList.toggle("is-open", !expanded);
-        });
-      }
-    });
-  </script>
 
 </body>
-</html>
+
+        </html>
