@@ -1398,97 +1398,447 @@ section {
 
     gap: 12px;
   }
+/* ============================================================
+   FINAL FOOTER OVERRIDE
+   ============================================================ */
 
-  .footer-col-title,
-  .footer-col h4 {
-    margin-bottom: 13px;
+.footer {
+  display: block !important;
+  width: 100% !important;
+  margin: 60px 0 0 !important;
+  padding: 0 !important;
+  background: #0a2a47 !important;
+  color: #cfdae4 !important;
+}
 
-    font-size: .64rem;
+/* ---------- DISCLAIMER ---------- */
+
+.footer .footer-disclaimer {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 22px 0 !important;
+
+  background: #071f33 !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(255,255,255,.08) !important;
+}
+
+.footer .footer-disclaimer .container {
+  display: block !important;
+  width: min(1180px, calc(100% - 32px)) !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+.footer .footer-disclaimer p {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+
+  color: #a9bccb !important;
+
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 12px !important;
+  line-height: 1.6 !important;
+}
+
+.footer .footer-disclaimer strong {
+  color: #ffffff !important;
+}
+
+
+/* ============================================================
+   FOOTER MAIN
+   ============================================================ */
+
+.footer .footer-main {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: #0a2a47 !important;
+}
+
+.footer .footer-main > .container {
+  display: block !important;
+
+  width: min(1180px, calc(100% - 32px)) !important;
+  max-width: 1180px !important;
+
+  margin: 0 auto !important;
+  padding: 42px 0 !important;
+}
+
+
+/* ============================================================
+   FOOTER GRID
+   ============================================================ */
+
+.footer .footer-grid {
+  display: grid !important;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr)) !important;
+
+  grid-auto-flow: row !important;
+
+  align-items: start !important;
+
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  gap: 50px !important;
+}
+
+
+/* ============================================================
+   FOOTER COLUMNS
+   ============================================================ */
+
+.footer .footer-col {
+  display: block !important;
+
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  float: none !important;
+  position: static !important;
+}
+
+.footer .footer-col-title,
+.footer .footer-col h4 {
+  display: block !important;
+
+  margin: 0 0 16px !important;
+  padding: 0 !important;
+
+  color: #ffffff !important;
+
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+
+  line-height: 1.3 !important;
+
+  letter-spacing: .06em !important;
+
+  text-transform: uppercase !important;
+}
+
+
+/* ============================================================
+   FOOTER LISTS
+   ============================================================ */
+
+.footer .footer-links {
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  align-items: flex-start !important;
+
+  width: 100% !important;
+
+  list-style: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  gap: 9px !important;
+}
+
+.footer .footer-links li {
+  display: block !important;
+
+  width: auto !important;
+
+  list-style: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  float: none !important;
+
+  position: static !important;
+}
+
+.footer .footer-links li::before {
+  content: none !important;
+}
+
+.footer .footer-links a {
+  display: inline-block !important;
+
+  width: auto !important;
+
+  color: #aebdca !important;
+
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 13px !important;
+
+  line-height: 1.5 !important;
+
+  text-decoration: none !important;
+}
+
+.footer .footer-links a:hover {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
+
+
+/* ============================================================
+   FOOTER BOTTOM
+   ============================================================ */
+
+.footer .footer-bottom {
+  display: block !important;
+
+  width: 100% !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: #061827 !important;
+
+  border-top: 1px solid rgba(255,255,255,.10) !important;
+
+  text-align: left !important;
+}
+
+.footer .footer-bottom > .container {
+  display: block !important;
+
+  width: min(1180px, calc(100% - 32px)) !important;
+  max-width: 1180px !important;
+
+  margin: 0 auto !important;
+  padding: 20px 0 !important;
+}
+
+.footer .footer-bottom-inner {
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: space-between !important;
+
+  width: 100% !important;
+
+  min-height: 48px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  gap: 20px !important;
+}
+
+
+/* Copyright */
+
+.footer .footer-copyright {
+  display: block !important;
+
+  width: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  color: #8298a9 !important;
+
+  font-family: "Courier New", Courier, monospace !important;
+  font-size: 10px !important;
+
+  line-height: 1.5 !important;
+}
+
+
+/* Bottom links */
+
+.footer .footer-bottom-links {
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: flex-end !important;
+
+  flex-wrap: wrap !important;
+
+  width: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  gap: 8px !important;
+
+  list-style: none !important;
+}
+
+.footer .footer-bottom-links a {
+  display: inline !important;
+
+  color: #9db0bf !important;
+
+  font-family: "Courier New", Courier, monospace !important;
+  font-size: 10px !important;
+
+  text-decoration: none !important;
+}
+
+.footer .footer-bottom-links a:hover {
+  color: #ffffff !important;
+}
+
+.footer .footer-bottom-links span {
+  display: inline !important;
+
+  color: #506878 !important;
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 640px) {
+
+  .footer {
+    margin-top: 45px !important;
   }
 
-  .footer-links {
-    gap: 8px;
+  .footer .footer-disclaimer {
+    padding: 20px 0 !important;
   }
 
-  .footer-links a {
-    font-size: .64rem;
-
-    line-height: 1.45;
-
-    overflow-wrap: anywhere;
+  .footer .footer-disclaimer .container,
+  .footer .footer-main > .container,
+  .footer .footer-bottom > .container {
+    width: calc(100% - 28px) !important;
   }
 
-  .footer-bottom .container {
-    padding: 19px 0 24px;
+  .footer .footer-disclaimer p {
+    font-size: 11px !important;
+    line-height: 1.6 !important;
   }
 
-  .footer-bottom-inner {
-    min-height: 0;
-
-    align-items: flex-start;
-
-    gap: 14px;
+  .footer .footer-main > .container {
+    padding: 34px 0 38px !important;
   }
 
-  .footer-copyright {
-    width: 100%;
+  /*
+     EXACTLY THREE COLUMNS ON MOBILE
+  */
 
-    font-size: .58rem;
+  .footer .footer-grid {
+    display: grid !important;
+
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr)) !important;
+
+    grid-auto-flow: row !important;
+
+    gap: 12px !important;
   }
 
-  .footer-bottom-links {
-    width: 100%;
+  .footer .footer-col {
+    display: block !important;
 
-    justify-content: flex-start;
-
-    gap: 6px;
+    width: auto !important;
   }
 
-  .footer-bottom-links a {
-    font-size: .58rem;
+  .footer .footer-col-title,
+  .footer .footer-col h4 {
+    font-size: 10px !important;
+    line-height: 1.35 !important;
+
+    margin-bottom: 13px !important;
   }
 
-  .footer-bottom-links span {
-    font-size: .5rem;
+  .footer .footer-links {
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    gap: 8px !important;
+  }
+
+  .footer .footer-links li {
+    display: block !important;
+
+    width: auto !important;
+  }
+
+  .footer .footer-links a {
+    font-size: 10px !important;
+    line-height: 1.45 !important;
+  }
+
+  .footer .footer-bottom > .container {
+    padding: 18px 0 24px !important;
+  }
+
+  .footer .footer-bottom-inner {
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: flex-start !important;
+
+    gap: 14px !important;
+  }
+
+  .footer .footer-copyright {
+    width: 100% !important;
+
+    font-size: 9px !important;
+  }
+
+  .footer .footer-bottom-links {
+    width: 100% !important;
+
+    justify-content: flex-start !important;
+
+    gap: 6px !important;
+  }
+
+  .footer .footer-bottom-links a {
+    font-size: 9px !important;
   }
 
 }
 
 
 /* ============================================================
-   SMALL PHONES
+   VERY SMALL PHONES
    ============================================================ */
 
 @media (max-width: 380px) {
 
-  .container {
-    width: calc(100% - 24px);
+  .footer .footer-grid {
+    gap: 8px !important;
   }
 
-  .masthead h1 {
-    font-size: 1.8rem;
+  .footer .footer-col-title,
+  .footer .footer-col h4 {
+    font-size: 9px !important;
   }
 
-  .hero-lead h2 {
-    font-size: 1.55rem;
+  .footer .footer-links a {
+    font-size: 9px !important;
   }
 
-  .footer-grid {
-    gap: 9px;
-  }
-
-  .footer-col-title,
-  .footer-col h4 {
-    font-size: .59rem;
-  }
-
-  .footer-links a {
-    font-size: .59rem;
-  }
-
-}
-
-
+   }
 /* ============================================================
    REDUCED MOTION
    ============================================================ */
