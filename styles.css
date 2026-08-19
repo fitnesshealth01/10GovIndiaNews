@@ -130,44 +130,237 @@ ol{
 
 
 /* ============================================================
-   MASTHEAD
+   COMPACT HEADER + RIGHT-SIDE MOBILE MENU
    ============================================================ */
 
 .masthead{
-  background:var(--paper-50);
+  padding:0;
   border-bottom:1px solid var(--line);
 }
 
-.masthead .container{
-  min-height:126px;
+.masthead > .container{
+  min-height:82px;
   display:flex;
-  flex-direction:column;
   align-items:center;
-  justify-content:center;
-  gap:5px;
-  text-align:center;
+  justify-content:space-between;
+  gap:24px;
+}
+
+.masthead-row{
+  width:100%;
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+
+.brand{
+  min-width:0;
 }
 
 .masthead h1{
   margin:0;
-  font-size:2.6rem;
-  line-height:1.05;
+  font-size:2.15rem;
+  line-height:1;
   letter-spacing:-.02em;
 }
 
-.masthead h1 a{
+.masthead .tagline{
+  margin-top:6px;
+  font-size:.63rem;
+  line-height:1.3;
+  letter-spacing:.09em;
+}
+
+.masthead .nav-toggle{
+  display:none;
+  flex:0 0 auto;
+  width:46px;
+  height:42px;
+  align-items:center;
+  justify-content:center;
+  margin:0;
+  padding:0;
+  border:0;
+  background:transparent;
   color:var(--navy-950);
-  text-decoration:none;
+  font-size:1.75rem;
+  line-height:1;
 }
 
-.tagline{
-  color:var(--ink-500);
-  font-family:var(--mono);
-  font-size:.73rem;
-  letter-spacing:.12em;
-  text-transform:uppercase;
+.masthead .nav-toggle:hover{
+  color:var(--amber-600);
 }
 
+.masthead .primary-nav{
+  flex:0 0 auto;
+  background:transparent;
+  border:0;
+}
+
+.masthead .primary-nav .container{
+  min-height:0;
+}
+
+.masthead .primary-nav ul{
+  display:flex;
+  align-items:center;
+  gap:0;
+}
+
+.masthead .primary-nav a{
+  padding:10px 12px;
+  color:var(--navy-950);
+  border:0;
+  font-size:.78rem;
+}
+
+.masthead .primary-nav a:hover{
+  background:transparent;
+  color:var(--blue-600);
+}
+
+.masthead .primary-nav a.active{
+  color:var(--blue-600);
+}
+
+.masthead .primary-nav a.active::after{
+  left:12px;
+  right:12px;
+  bottom:3px;
+  height:2px;
+}
+
+
+/* ------------------------------------------------------------
+   MOBILE HEADER
+   ------------------------------------------------------------ */
+
+@media(max-width:640px){
+
+  .masthead > .container{
+    width:calc(100% - 28px);
+    min-height:76px;
+    display:block;
+  }
+
+  .masthead-row{
+    min-height:76px;
+    gap:12px;
+  }
+
+  .brand{
+    padding-right:8px;
+  }
+
+  .masthead h1{
+    font-size:1.72rem;
+    white-space:nowrap;
+  }
+
+  .masthead .tagline{
+    max-width:270px;
+    margin-top:5px;
+    font-size:.52rem;
+    letter-spacing:.065em;
+    line-height:1.35;
+  }
+
+  .masthead .nav-toggle{
+    display:flex;
+  }
+
+  .masthead .primary-nav{
+    width:100%;
+    padding:0;
+  }
+
+  .masthead .primary-nav ul{
+    display:none;
+    width:100%;
+    flex-direction:column;
+    align-items:stretch;
+    margin:0 0 12px;
+    padding:4px 0;
+    background:var(--navy-950);
+    border-radius:var(--radius);
+    overflow:hidden;
+  }
+
+  .masthead .primary-nav ul.open{
+    display:flex;
+  }
+
+  .masthead .primary-nav li{
+    width:100%;
+  }
+
+  .masthead .primary-nav a{
+    display:block;
+    width:100%;
+    padding:12px 14px;
+    color:#eef3f8;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    font-size:.8rem;
+  }
+
+  .masthead .primary-nav li:last-child a{
+    border-bottom:0;
+  }
+
+  .masthead .primary-nav a:hover{
+    background:var(--navy-800);
+    color:#fff;
+  }
+
+  .masthead .primary-nav a.active{
+    color:#fff;
+    background:var(--navy-800);
+  }
+
+  .masthead .primary-nav a.active::after{
+    display:none;
+  }
+
+  /* Remove the old large blue navigation bar */
+  .primary-nav{
+    border-top:0;
+  }
+
+  .ticker-wrap{
+    min-height:38px;
+  }
+
+}
+
+
+/* ------------------------------------------------------------
+   VERY SMALL PHONES
+   ------------------------------------------------------------ */
+
+@media(max-width:380px){
+
+  .masthead > .container{
+    width:calc(100% - 24px);
+  }
+
+  .masthead h1{
+    font-size:1.55rem;
+  }
+
+  .masthead .tagline{
+    max-width:235px;
+    font-size:.48rem;
+  }
+
+  .masthead .nav-toggle{
+    width:42px;
+    height:40px;
+    font-size:1.6rem;
+  }
+
+  }
 
 /* ============================================================
    NAVIGATION
