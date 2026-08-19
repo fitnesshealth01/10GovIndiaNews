@@ -1763,3 +1763,18 @@ a:hover{
 .footer-copyright{
   color:#9cafbc;
 }
+@media (max-width:640px){
+  .masthead .primary-nav ul{
+    display:none;
+  }
+
+  .masthead .primary-nav ul.open{
+    display:flex;
+  }
+
+  .masthead .nav-toggle{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+}
