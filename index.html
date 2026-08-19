@@ -223,41 +223,77 @@
 
 </main>
 
-<footer>
+<footer class="footer" role="contentinfo">
   <div class="footer-disclaimer">
     Disclaimer: GovIndiaNews is a privately run news and information portal. Content is provided for general informational purposes and is compiled from publicly available government notifications, press releases and official websites. We are not a government entity and cannot process applications, payments, or grievances on behalf of any government body. Always verify scheme and recruitment details on the concerned department's official website before applying or making any payment.
-  </div>
   <div class="container">
-    <div>
-      <h4>GovIndiaNews</h4>
-      <p>Independent coverage of government schemes, sarkari jobs and exam updates — explained in plain language, with sources linked.</p>
+    <!-- Newsletter / Subscribe to Gazette -->
+    <div class="footer-newsletter">
+      <div class="footer-newsletter-content">
+        <div class="footer-newsletter-badge">
+          <span class="live-dot"></span> Daily Gazette Updates
+        </div>
+        <h3 class="footer-newsletter-title">Subscribe to Gazette</h3>
+      </div>
+      <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to GovIndiaNews Gazette!');">
+        <input type="email" placeholder="Enter your email address..." required aria-label="Email address for newsletter">
+        <button  type="submit" class="btn btn-primary" aria-label="Subscribe">Subscribe</button>
+      </form>
     </div>
-    <div>
-      <h4>Sections</h4>
-      <ul>
-        <li><a href="schemes.html">Government Schemes</a></li>
-        <li><a href="jobs.html">Sarkari Jobs</a></li>
-        <li><a href="education.html">Education &amp; Exams</a></li>
-      </ul>
+    
+      <div class="footer-col">
+        <h4 class="footer-col-title">Categories</h4>
+        <ul class="footer-links">
+          <li><a href="/category-government-schemes.html">Government Schemes</a></li>
+          <li><a href="/category-government-jobs.html">Government Jobs</a></li>
+          <li><a href="/category-global-finance.html">Global Finance</a></li>
+          <li><a href="/category-opinion-editorial.html">Opinion & Editorial</a></li>
+          <li><a href="/web-stories.html">Web Stories Reel</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Trust & Policies</h4>
+        <ul class="footer-links">
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/author.html">Editorial Team & Author</a></li>
+          <li><a href="/editorial-policy.html">Editorial Policy</a></li>
+          <li><a href="/fact-check-policy.html">Fact Check Policy</a></li>
+          <li><a href="/corrections-policy.html">Corrections Policy</a></li>
+          <li><a href="/ethics-policy.html">Ethics Policy</a></li>
+          <li><a href="/ownership-funding.html">Ownership & Funding</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Legal & Contact</h4>
+        <ul class="footer-links">
+          <li><a href="/contact.html">Contact Us</a></li>
+          <li><a href="/grievance.html">Grievance Redressal</a></li>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Service</a></li>
+          <li><a href="/disclaimer.html">Disclaimer</a></li>
+          <li><a href="/cookie-policy.html">Cookie Policy</a></li>
+        </ul>
+      </div>
     </div>
-    <div>
-      <h4>Site</h4>
-      <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Legal</h4>
-      <ul>
-        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="terms.html">Terms of Use</a></li>
-      </ul>
+
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        &copy; 2026 GovIndiaNews. All rights reserved. Registered Digital News Publisher.
+      </div>
+      <div class="footer-bottom-links">
+        <a href="/sitemap.xml">Sitemap XML</a>
+        <span>&bull;</span>
+        <a href="/rss.xml">RSS Feed</a>
+        <span>&bull;</span>
+        <a href="/privacy-policy.html">Privacy</a>
+        <span>&bull;</span>
+        <a href="/terms.html">Terms</a>
+      </div>
     </div>
   </div>
-  <div class="footer-bottom">&copy; 2026 GovIndiaNews. All rights reserved. Not affiliated with the Government of India.</div>
 </footer>
-
 <script src="script.min.js"></script>
 </body>
 </html>
