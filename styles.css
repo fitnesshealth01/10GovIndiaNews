@@ -111,21 +111,12 @@ ol{
    ============================================================ */
 
 .utility-bar{
-  min-height:34px;
-  display:flex;
-  align-items:center;
   background:var(--navy-800);
-  color:#dbe6ef;
-  font-family:var(--mono);
-  font-size:.72rem;
+  color:#eef3f8;
 }
 
-.utility-bar .container{
-  min-height:34px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
+.utility-bar span{
+  color:#eef3f8;
 }
 
 
