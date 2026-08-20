@@ -527,23 +527,6 @@ main.container{
   min-width:0;
 }
 
-.hero-lead .thumb{
-  width:100%;
-  aspect-ratio:16/9;
-  margin-bottom:16px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  background:linear-gradient(135deg,var(--navy-800),var(--blue-600));
-  border-radius:var(--radius);
-  color:rgba(255,255,255,.68);
-  font-family:var(--mono);
-  font-size:.7rem;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
 .hero-lead .eyebrow{
   color:var(--amber-600);
   font-family:var(--mono);
