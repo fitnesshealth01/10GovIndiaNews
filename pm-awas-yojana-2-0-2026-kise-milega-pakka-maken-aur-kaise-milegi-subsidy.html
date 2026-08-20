@@ -60,16 +60,6 @@
 
 <body>
 
-  <!-- TOP DISCLAIMER -->
-
-  <div class="disclaimer-bar">
-    <strong>GovIndiaNews</strong>
-    is an independent news &amp; information portal.
-    We are not affiliated with, endorsed by, or operated by
-    the Government of India or any state government.
-  </div>
-
-
   <!-- DATE / EDITION -->
 
   <div class="utility-bar">
@@ -80,39 +70,56 @@
   </div>
 
 
-  <!-- HEADER -->
+  <!-- =========================================================
+     MASTHEAD
+     ========================================================= -->
 
-  <header class="masthead">
+<header class="masthead">
 
-    <div class="container">
+  <div class="container">
 
-      <h1>
-        <a href="index.html">GovIndiaNews</a>
-      </h1>
+    <div class="masthead-row">
 
-      <div class="tagline">
-        Schemes &middot; Sarkari Jobs &middot; Exam Updates — Explained Simply
+      <div class="brand">
+
+        <h1>
+          <a href="index.html">GovIndiaNews</a>
+        </h1>
+
+        <div class="tagline">
+          Schemes &middot; Sarkari Jobs &middot; Exam Updates — Explained Simply
+        </div>
+
       </div>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="site-navigation"
+      >
+        <span aria-hidden="true">&#9776;</span>
+      </button>
 
     </div>
 
-  </header>
-
-
-  <!-- NAVIGATION -->
-
-  <nav class="primary-nav" aria-label="Primary navigation">
-
-    <div class="container">
+    <nav
+      class="primary-nav"
+      id="site-navigation"
+      aria-label="Primary navigation"
+    >
 
       <ul>
 
         <li>
-          <a href="index.html">Home</a>
+          <a href="index.html" class="active" aria-current="page">
+            Home
+          </a>
         </li>
 
         <li>
-          <a href="schemes.html" class="active">
+          <a href="schemes.html">
             Government Schemes
           </a>
         </li>
@@ -143,19 +150,47 @@
 
       </ul>
 
-      <button
-        class="nav-toggle"
-        type="button"
-        aria-label="Toggle menu"
-        aria-expanded="false"
-      >
-        &#9776;
-      </button>
+    </nav>
 
-    </div>
+  </div>
 
-  </nav>
+</header>
 
+
+<!-- =========================================================
+     PRIMARY NAVIGATION
+     ========================================================= -->
+
+<nav class="primary-nav" aria-label="Primary navigation">
+  <div class="container">
+
+    <ul>
+      <li>
+        <a href="index.html" class="active" aria-current="page">Home</a>
+      </li>
+
+      <li>
+        <a href="schemes.html">Government Schemes</a>
+      </li>
+
+      <li>
+        <a href="jobs.html">Sarkari Jobs</a>
+      </li>
+
+      <li>
+        <a href="education.html">Education &amp; Exams</a>
+      </li>
+
+      <li>
+        <a href="about.html">About</a>
+      </li>
+
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
   <!-- ARTICLE -->
 
