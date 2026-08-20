@@ -1769,3 +1769,19 @@ a:hover{
     justify-content:center;
   }
 }
+.article-featured-image{
+  width:100%;
+  margin:0 0 28px;
+  padding:0;
+  overflow:hidden;
+  border-radius:var(--radius);
+  background:#e4edf5;
+}
+
+.article-featured-image img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:16 / 9;
+  object-fit:cover;
+}
